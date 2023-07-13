@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -e "$(cat iacta)\n$(cat iacta | tail --lines=1)"
