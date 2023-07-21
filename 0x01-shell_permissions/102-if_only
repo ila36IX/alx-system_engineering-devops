@@ -1,2 +1,2 @@
 #!/bin/bash
-file="hello"; if [ "$(stat -c '%U' "$file")" = "guillaume" ]; then chown "betty" "$file"
+sudo chown -R --from=guillaume betty hello
