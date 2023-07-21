@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -maxpath 1 -type f '[A-Z]*' -exec move {} /tmp/u
