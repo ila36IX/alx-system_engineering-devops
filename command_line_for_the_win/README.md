@@ -1,7 +1,7 @@
 # Secure File Transfer Protocol (`sftp`)
 ![](https://media.tenor.com/w1zY5ak1IpUAAAAC/phineas-ferb.gif)
 
-> Picture your code the in the remote server as a big freight packed in a truck, arriving at the loading dock of your local machine.
+> Picture your code that in the remote server as a big freight packed in a truck, arriving at the loading dock of your local machine.
 * 🚚 The truck is the `sftp` command
 * 🛒 The freight is you code or any data that exist in remote server
 * 🏗️ The "loading dock" is your lacal machine
