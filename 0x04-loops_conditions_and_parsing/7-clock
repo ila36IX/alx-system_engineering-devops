@@ -14,5 +14,5 @@ while [ "$hours" -lt 13 ]; do
         done
         (( minutes = 1 ))
         (( hours++ ))
-        (( minutes = 0 ))
+        (( minutes = 1 ))
 done
