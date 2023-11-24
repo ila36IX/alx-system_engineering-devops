@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Displays the content of the file /etc/passwd
+
+file=/etc/passwd
+
+while IFS= read -r line; do
+        echo -n "The user"
+        echo "$line" | cut -d ":" -f 1 | tr "\n" " "
+        echo -n "is part of the "
+        echo -n "$line" | cut -d ":" -f 4 | tr "\n" " "
+        echo -n "gang, lives in "
+        echo -n "$line" | cut -d ":" -f 6 | tr "\n" " "
+        echo -n "and rides "
+        echo -n "$line" | cut -d ":" -f 7 | tr -d "\n"
+        echo -n ". "
+        echo -n "$line" | cut -d ":" -f 3 | tr -d "\n"
+        echo -n "'s place is protected by the passcode "
+        echo -n "$line" | cut -d ":" -f 2 | tr -d "\n"
+        echo -n ", more info about the user here: "
+        echo -n "$line" | cut -d ":" -f 5
+done < $file
