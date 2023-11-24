@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# See hi with Mr. Nine
+
+i=0
+while [ "$i" -lt 10 ]
+do
+        echo "Best School"
+        if [ "$i" = 8 ]
+        then
+                echo "Hi"
+        fi
+        (( i++ ))
+done
