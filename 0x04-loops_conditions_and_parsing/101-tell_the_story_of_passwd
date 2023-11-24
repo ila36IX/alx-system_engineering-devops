@@ -4,7 +4,7 @@
 file=/etc/passwd
 
 while IFS= read -r line; do
-        echo -n "The user"
+        echo -n "The user "
         echo "$line" | cut -d ":" -f 1 | tr "\n" " "
         echo -n "is part of the "
         echo -n "$line" | cut -d ":" -f 4 | tr "\n" " "
