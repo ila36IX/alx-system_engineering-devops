@@ -3,7 +3,7 @@
 
 hours=0
 minutes=1
-while [ "$hours" -lt 12 ]; do
+while [ "$hours" -lt 13 ]; do
         while [ "$minutes" -lt 60 ]; do
                 if [ "$minutes" = 1 ]
                 then
