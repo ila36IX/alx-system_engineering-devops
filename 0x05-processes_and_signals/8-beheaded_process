@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Kill the snoby precess
+pkill -9 -f "highlander"

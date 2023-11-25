@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# displays To infinity and beyond indefinitely
+
+_term() { 
+	echo "Terminated"
+	exit
+}
+while [ 1 ]; do
+	echo "To infinity and beyond"
+	trap _term  SIGTERM
+	sleep 2
+
+done

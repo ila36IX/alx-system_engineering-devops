@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Kill snobby precess
+
+pkill -f "7-highlander"

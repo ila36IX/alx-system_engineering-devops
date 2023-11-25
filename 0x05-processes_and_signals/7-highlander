@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Process that con't be stopped using kill
+
+_term() {
+	echo "I am invincible!!!"
+}
+
+_kill() {
+	echo "^C"
+	exit
+}
+
+trap _kill SIGKILL
+trap _term SIGTERM
+
+while sleep 2
+do
+	echo "To infinity and beyond"
+done

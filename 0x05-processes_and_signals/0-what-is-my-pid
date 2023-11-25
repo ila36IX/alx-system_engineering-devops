@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# DIsplay the PID of current process
+
+ps | awk '{if (NR == 2) print $1}'

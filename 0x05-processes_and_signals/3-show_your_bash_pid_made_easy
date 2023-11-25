@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Just the PID and Bash
+ps aux | grep bash | awk '{print $2, "bash"}'
