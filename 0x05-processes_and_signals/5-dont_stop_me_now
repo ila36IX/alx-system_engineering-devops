@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # stops 4-to_infinity_and_beyond process
-kill $(ps aux | grep 4-to_infinity_and_beyond | awk '{if (NR == 1) print $2}')
+
+kill $(pgrep -f 4-to_infinity_and_beyond)
