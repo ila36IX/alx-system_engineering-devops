@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Process and PID file
+
+echo $$ >>  /var/run/myscript.pid
+
+_int() {
+        rm -f /var/run/myscript.pid
+        echo "Y U no love me?!"
+}
+
+_term() {
+        echo "I hate the kill command"
+        rm -f /var/run/myscript.pid
+        exit
+}
+
+trap _term SIGTERM
+trap "rm -f /var/run/myscript.pid; exit" SIGQUIT
+trap _int SIGINT
+
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
