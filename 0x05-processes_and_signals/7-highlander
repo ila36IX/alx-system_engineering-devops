@@ -1,17 +1,7 @@
 #!/usr/bin/env bash
 # Process that con't be stopped using kill
 
-_term() {
-	echo "I am invincible!!!"
-}
-
-_kill() {
-	echo "^C"
-	exit
-}
-
-trap _kill SIGKILL
-trap _term SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 while sleep 2
 do
