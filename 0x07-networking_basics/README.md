@@ -84,7 +84,7 @@ IP addresses are essential for data routing and addressing in the network. There
 ![](https://www.webopedia.com/wp-content/uploads/2020/10/what-is-the-difference-between-ipv6-and-ipv4_5f85a8b80d255-2.jpeg)
 
 | | Bits | Possibilities | Example |
-|--| -- | -- | -- |
+| -- | -- | -- | -- |
 |IPv4| 32-bit | 2^32 (4 billion)| 1.160.10.240 |
 |IPv6| 128-bit | 2^128 (infinite-Like number) | 3ffe:1900:4545:3:200:f8ff:fe21:67cf| 
 
