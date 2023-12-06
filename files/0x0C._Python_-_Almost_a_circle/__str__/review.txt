@@ -1,0 +1,32 @@
+1 - Title : Files exist
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/rectangle.py
+	Type : Requirement
+
+4 - Title : __str__ of Rectangle(10, 12)
+	Type : Code
+	File : main_0.py
+
+5 - Title : __str__ of Rectangle(12, 10)
+	Type : Code
+	File : main_1.py
+
+6 - Title : __str__ of Rectangle(12, 10, 3)
+	Type : Code
+	File : main_2.py
+
+7 - Title : __str__ of Rectangle(12, 10, 3, 6)
+	Type : Code
+	File : main_3.py
+
+8 - Title : __str__ of Rectangle(12, 10, 3, 6, 8)
+	Type : Code
+	File : main_4.py
+
+9 - Title : Pycodestyle validation
+	Type : Requirement
+

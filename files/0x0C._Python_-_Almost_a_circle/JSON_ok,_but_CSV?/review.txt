@@ -1,0 +1,28 @@
+1 - Title : Files exist
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/base.py
+	Type : Requirement
+
+4 - Title : save_to_file_csv class method exists in Base
+	Type : Code
+	File : main_0.py
+
+5 - Title : load_from_file_csv class method exists in Base
+	Type : Code
+	File : main_1.py
+
+6 - Title : Can serialize and deserialize in CSV a list of Rectangle
+	Type : Code
+	File : main_2.py
+
+7 - Title : Can serialize and deserialize in CSV a list of Square
+	Type : Code
+	File : main_3.py
+
+8 - Title : Pycodestyle validation
+	Type : Requirement
+

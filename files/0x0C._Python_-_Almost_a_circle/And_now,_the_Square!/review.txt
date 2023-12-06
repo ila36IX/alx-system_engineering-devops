@@ -1,0 +1,44 @@
+1 - Title : Files exist
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/square.py
+	Type : Requirement
+
+4 - Title : Class Square exists and inherits from Rectangle
+	Type : Code
+	File : main_0.py
+
+5 - Title : Can create Square with only size - Square(5) - size must be validated as width and height
+	Type : Code
+	File : main_1.py
+
+6 - Title : Can create Square with size and x - Square(5, 7) - x must be validated
+	Type : Code
+	File : main_2.py
+
+7 - Title : Can create Square with size, x and y - Square(5, 7, 2) - y must be validated
+	Type : Code
+	File : main_3.py
+
+8 - Title : Can create Square with size, x, y and id - Square(5, 7, 2, 89)
+	Type : Code
+	File : main_4.py
+
+9 - Title : __str__ is overloaded in Square
+	Type : Code
+	File : main_5.py
+
+10 - Title : Method area() is available in Square (inherits from Rectangle)
+	Type : Code
+	File : main_6.py
+
+11 - Title : Method display() is available in Square (inherits from Rectangle)
+	Type : Code
+	File : main_7.py
+
+12 - Title : Pycodestyle validation
+	Type : Requirement
+

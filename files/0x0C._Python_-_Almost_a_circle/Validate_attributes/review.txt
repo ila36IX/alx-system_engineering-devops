@@ -1,0 +1,76 @@
+1 - Title : Files exist
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/rectangle.py
+	Type : Requirement
+
+4 - Title : TypeError exception is raised for width during instantiation if not an integer
+	Type : Code
+	File : main_0.py
+
+5 - Title : TypeError exception is raised for height during instantiation if not an integer
+	Type : Code
+	File : main_1.py
+
+6 - Title : TypeError exception is raised for x during instantiation if not an integer
+	Type : Code
+	File : main_2.py
+
+7 - Title : TypeError exception is raised for y during instantiation if not an integer
+	Type : Code
+	File : main_3.py
+
+8 - Title : TypeError exception is raised for width during setter method if not an integer
+	Type : Code
+	File : main_4.py
+
+9 - Title : TypeError exception is raised for height during setter method if not an integer
+	Type : Code
+	File : main_5.py
+
+10 - Title : TypeError exception is raised for x during setter method if not an integer
+	Type : Code
+	File : main_6.py
+
+11 - Title : TypeError exception is raised for y during setter method if not an integer
+	Type : Code
+	File : main_7.py
+
+12 - Title : ValueError exception is raised for width during instantiation if under or equals 0
+	Type : Code
+	File : main_8.py
+
+13 - Title : ValueError exception is raised for height during instantiation if under or equals 0
+	Type : Code
+	File : main_9.py
+
+14 - Title : ValueError exception is raised for x during instantiation if under 0
+	Type : Code
+	File : main_10.py
+
+15 - Title : ValueError exception is raised for y during instantiation if under 0
+	Type : Code
+	File : main_11.py
+
+16 - Title : ValueError exception is raised for width during setter method if under or equals 0
+	Type : Code
+	File : main_12.py
+
+17 - Title : ValueError exception is raised for height during setter method if under or equals 0
+	Type : Code
+	File : main_13.py
+
+18 - Title : ValueError exception is raised for x during setter method if under 0
+	Type : Code
+	File : main_14.py
+
+19 - Title : ValueError exception is raised for y during setter method if under 0
+	Type : Code
+	File : main_15.py
+
+20 - Title : Pycodestyle validation
+	Type : Requirement
+

@@ -1,0 +1,48 @@
+1 - Title : File exists
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/rectangle.py
+	Type : Requirement
+
+4 - Title : Class Rectangle exists and inherits from Base
+	Type : Code
+	File : main_0.py
+
+5 - Title : Can create an instance of Rectangle with: width and height
+	Type : Code
+	File : main_1.py
+
+6 - Title : Can create an instance of Rectangle with: width, height and x
+	Type : Code
+	File : main_2.py
+
+7 - Title : Can create an instance of Rectangle with: width, height, x and y
+	Type : Code
+	File : main_3.py
+
+8 - Title : Can create an instance of Rectangle with: width, height, x, y and id
+	Type : Code
+	File : main_4.py
+
+9 - Title : Rectangle has getter and setter for width
+	Type : Code
+	File : main_5.py
+
+10 - Title : Rectangle has getter and setter for height
+	Type : Code
+	File : main_6.py
+
+11 - Title : Rectangle has getter and setter for x
+	Type : Code
+	File : main_7.py
+
+12 - Title : Rectangle has getter and setter for y
+	Type : Code
+	File : main_8.py
+
+13 - Title : Pycodestyle validation
+	Type : Requirement
+

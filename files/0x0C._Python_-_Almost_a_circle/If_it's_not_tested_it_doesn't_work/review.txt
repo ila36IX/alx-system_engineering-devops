@@ -1,0 +1,335 @@
+1 - Title : README.md exists and is not empty
+	Type : Requirement
+
+2 - Title : Test of Base() for assigning automatically an ID exists
+	Type : Code
+	File : main_0.py
+
+3 - Title : Test of Base() for assigning automatically an ID + 1 of the previous exists
+	Type : Code
+	File : main_1.py
+
+4 - Title : Test of Base(89) saving the ID passed exists
+	Type : Code
+	File : main_2.py
+
+5 - Title : Test of Base.to_json_string(None) exists
+	Type : Code
+	File : main_3.py
+
+6 - Title : Test of Base.to_json_string([]) exists
+	Type : Code
+	File : main_4.py
+
+7 - Title : Test of Base.to_json_string([ { 'id': 12 }]) exists
+	Type : Code
+	File : main_5.py
+
+8 - Title : Test of Base.to_json_string([ { 'id': 12 }]) returning a string exists
+	Type : Code
+	File : main_6.py
+
+9 - Title : Test of Base.from_json_string(None) exists
+	Type : Code
+	File : main_7.py
+
+10 - Title : Test of Base.from_json_string("[]") exists
+	Type : Code
+	File : main_8.py
+
+11 - Title : Test of Base.from_json_string('[{ "id": 89 }]') exists
+	Type : Code
+	File : main_9.py
+
+12 - Title : Test of Base.from_json_string('[{ "id": 89 }]') returning a list exists
+	Type : Code
+	File : main_10.py
+
+13 - Title : Test of Rectangle(1, 2) exists
+	Type : Code
+	File : main_11.py
+
+14 - Title : Test of Rectangle(1, 2, 3) exists
+	Type : Code
+	File : main_12.py
+
+15 - Title : Test of Rectangle(1, 2, 3, 4) exists
+	Type : Code
+	File : main_13.py
+
+16 - Title : Test of Rectangle("1", 2) exists
+	Type : Code
+	File : main_14.py
+
+17 - Title : Test of Rectangle(1, "2") exists
+	Type : Code
+	File : main_15.py
+
+18 - Title : Test of Rectangle(1, 2, "3") exists
+	Type : Code
+	File : main_16.py
+
+19 - Title : Test of Rectangle(1, 2, 3, "4") exists
+	Type : Code
+	File : main_17.py
+
+20 - Title : Test of Rectangle(1, 2, 3, 4, 5) exists
+	Type : Code
+	File : main_18.py
+
+21 - Title : Test of Rectangle(-1, 2) exists
+	Type : Code
+	File : main_19.py
+
+22 - Title : Test of Rectangle(1, -2) exists
+	Type : Code
+	File : main_20.py
+
+23 - Title : Test of Rectangle(0, 2) exists
+	Type : Code
+	File : main_21.py
+
+24 - Title : Test of Rectangle(1, 0) exists
+	Type : Code
+	File : main_22.py
+
+25 - Title : Test of Rectangle(1, 2, -3) exists
+	Type : Code
+	File : main_23.py
+
+26 - Title : Test of Rectangle(1, 2, 3, -4) exists
+	Type : Code
+	File : main_24.py
+
+27 - Title : Test of area() exists
+	Type : Code
+	File : main_25.py
+
+28 - Title : Test of __str__() for Rectangle exists
+	Type : Code
+	File : main_26.py
+
+29 - Title : Test of display() without x and y exists
+	Type : Code
+	File : main_27.py
+
+30 - Title : Test of display() without y exists
+	Type : Code
+	File : main_28.py
+
+31 - Title : Test of display() exists
+	Type : Code
+	File : main_29.py
+
+32 - Title : Test of to_dictionary() in Rectangle exists
+	Type : Code
+	File : main_30.py
+
+33 - Title : Test of update() in Rectangle exists
+	Type : Code
+	File : main_31.py
+
+34 - Title : Test of update(89) in Rectangle exists
+	Type : Code
+	File : main_32.py
+
+35 - Title : Test of update(89, 1) in Rectangle exists
+	Type : Code
+	File : main_33.py
+
+36 - Title : Test of update(89, 1, 2) in Rectangle exists
+	Type : Code
+	File : main_34.py
+
+37 - Title : Test of update(89, 1, 2, 3) in Rectangle exists
+	Type : Code
+	File : main_35.py
+
+38 - Title : Test of update(89, 1, 2, 3, 4) in Rectangle exists
+	Type : Code
+	File : main_36.py
+
+39 - Title : Test of update(**{ 'id': 89 }) in Rectangle exists
+	Type : Code
+	File : main_37.py
+
+40 - Title : Test of update(**{ 'id': 89, 'width': 1 }) in Rectangle exists
+	Type : Code
+	File : main_38.py
+
+41 - Title : Test of update(**{ 'id': 89, 'width': 1, 'height': 2 }) in Rectangle exists
+	Type : Code
+	File : main_39.py
+
+42 - Title : Test of update(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3 }) in Rectangle exists
+	Type : Code
+	File : main_40.py
+
+43 - Title : Test of update(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4 }) in Rectangle exists
+	Type : Code
+	File : main_41.py
+
+44 - Title : Test of Rectangle.create(**{ 'id': 89 }) in Rectangle exists
+	Type : Code
+	File : main_42.py
+
+45 - Title : Test of Rectangle.create(**{ 'id': 89, 'width': 1 }) in Rectangle exists
+	Type : Code
+	File : main_43.py
+
+46 - Title : Test of Rectangle.create(**{ 'id': 89, 'width': 1, 'height': 2 }) in Rectangle exists
+	Type : Code
+	File : main_44.py
+
+47 - Title : Test of Rectangle.create(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3 }) in Rectangle exists
+	Type : Code
+	File : main_45.py
+
+48 - Title : Test of Rectangle.create(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4 }) in Rectangle exists
+	Type : Code
+	File : main_46.py
+
+49 - Title : Test of Rectangle.save_to_file(None) in Rectangle exists
+	Type : Code
+	File : main_47.py
+
+50 - Title : Test of Rectangle.save_to_file([]) in Rectangle exists
+	Type : Code
+	File : main_48.py
+
+51 - Title : Test of Rectangle.save_to_file([Rectangle(1, 2)]) in Rectangle exists
+	Type : Code
+	File : main_49.py
+
+52 - Title : Test of Rectangle.load_from_file() when file doesn’t exist exists
+	Type : Code
+	File : main_50.py
+
+53 - Title : Test of Rectangle.load_from_file() when file exists exists
+	Type : Code
+	File : main_51.py
+
+54 - Title : Test of Square(1) exists
+	Type : Code
+	File : main_52.py
+
+55 - Title : Test of Square(1, 2) exists
+	Type : Code
+	File : main_53.py
+
+56 - Title : Test of Square(1, 2, 3) exists
+	Type : Code
+	File : main_54.py
+
+57 - Title : Test of Square("1") exists
+	Type : Code
+	File : main_55.py
+
+58 - Title : Test of Square(1, "2") exists
+	Type : Code
+	File : main_56.py
+
+59 - Title : Test of Square(1, 2, "3") exists
+	Type : Code
+	File : main_57.py
+
+60 - Title : Test of Square(1, 2, 3, 4) exists
+	Type : Code
+	File : main_58.py
+
+61 - Title : Test of Square(-1) exists
+	Type : Code
+	File : main_59.py
+
+62 - Title : Test of Square(1, -2) exists
+	Type : Code
+	File : main_60.py
+
+63 - Title : Test of Square(1, 2, -3) exists
+	Type : Code
+	File : main_61.py
+
+64 - Title : Test of Square(0) exists
+	Type : Code
+	File : main_62.py
+
+65 - Title : Test of __str__() for Square exists
+	Type : Code
+	File : main_63.py
+
+66 - Title : Test of to_dictionary() in Square exists
+	Type : Code
+	File : main_64.py
+
+67 - Title : Test of update() in Square exists
+	Type : Code
+	File : main_65.py
+
+68 - Title : Test of update(89) in Square exists
+	Type : Code
+	File : main_66.py
+
+69 - Title : Test of update(89, 1) in Square exists
+	Type : Code
+	File : main_67.py
+
+70 - Title : Test of update(89, 1, 2) in Square exists
+	Type : Code
+	File : main_68.py
+
+71 - Title : Test of update(89, 1, 2, 3) in Square exists
+	Type : Code
+	File : main_69.py
+
+72 - Title : Test of update(**{ 'id': 89 }) in Square exists
+	Type : Code
+	File : main_70.py
+
+73 - Title : Test of update(**{ 'id': 89, 'size': 1 }) in Square exists
+	Type : Code
+	File : main_71.py
+
+74 - Title : Test of update(**{ 'id': 89, 'size': 1, 'x': 2 }) in Square exists
+	Type : Code
+	File : main_72.py
+
+75 - Title : Test of update(**{ 'id': 89, 'size': 1, 'x': 2, 'y': 3 }) in Square exists
+	Type : Code
+	File : main_73.py
+
+76 - Title : Test of Square.create(**{ 'id': 89 }) in Square exists
+	Type : Code
+	File : main_74.py
+
+77 - Title : Test of Square.create(**{ 'id': 89, 'size': 1 }) in Square exists
+	Type : Code
+	File : main_75.py
+
+78 - Title : Test of Square.create(**{ 'id': 89, 'size': 1, 'x': 2 }) in Square exists
+	Type : Code
+	File : main_76.py
+
+79 - Title : Test of Square.create(**{ 'id': 89, 'size': 1, 'x': 2, 'y': 3 }) in Square exists
+	Type : Code
+	File : main_77.py
+
+80 - Title : Test of Square.save_to_file(None) in Square exists
+	Type : Code
+	File : main_78.py
+
+81 - Title : Test of Square.save_to_file([]) in Square exists
+	Type : Code
+	File : main_79.py
+
+82 - Title : Test of Square.save_to_file([Square(1)]) in Square exists
+	Type : Code
+	File : main_80.py
+
+83 - Title : Test of Square.load_from_file() when file doesn’t exist exists
+	Type : Code
+	File : main_81.py
+
+84 - Title : Test of Square.load_from_file() when file exists exists
+	Type : Code
+	File : main_82.py
+

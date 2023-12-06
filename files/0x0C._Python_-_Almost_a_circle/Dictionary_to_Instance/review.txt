@@ -1,0 +1,54 @@
+1 - Title : Files exist
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/base.py
+	Type : Requirement
+
+4 - Title : You are not allowed to use eval
+	Type : Requirement
+
+5 - Title : You must use the method def update(self, *args, **kwargs)
+	Type : Requirement
+
+6 - Title : create class method exists in Base
+	Type : Code
+	File : main_0.py
+
+7 - Title : Rectangle.create(**{ 'width': 2, 'height': 3 }) creates a new Rectangle instance
+	Type : Code
+	File : main_1.py
+
+8 - Title : Rectangle.create(**{ 'width': 2, 'height': 3, 'x': 12 }) creates a new Rectangle instance
+	Type : Code
+	File : main_2.py
+
+9 - Title : Rectangle.create(**{ 'width': 2, 'height': 3, 'x': 12, 'y': 1 }) creates a new Rectangle instance
+	Type : Code
+	File : main_3.py
+
+10 - Title : Rectangle.create(**{ 'width': 2, 'height': 3, 'x': 12, 'y': 1, 'id': 89 }) creates a new Rectangle instance
+	Type : Code
+	File : main_4.py
+
+11 - Title : Square.create(**{ 'size': 2 }) creates a new Square instance
+	Type : Code
+	File : main_5.py
+
+12 - Title : Square.create(**{ 'size': 2, 'x': 1 }) creates a new Square instance
+	Type : Code
+	File : main_6.py
+
+13 - Title : Square.create(**{ 'size': 2, 'x': 1, 'y': 3 }) creates a new Square instance
+	Type : Code
+	File : main_7.py
+
+14 - Title : Square.create(**{ 'size': 2, 'x': 1, 'y': 3, 'id': 89 }) creates a new Square instance
+	Type : Code
+	File : main_8.py
+
+15 - Title : Pycodestyle validation
+	Type : Requirement
+

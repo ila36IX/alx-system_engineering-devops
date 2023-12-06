@@ -1,0 +1,9 @@
+1 - Title : Static method exists
+	Type : Requirement
+
+2 - Title : Rectangle instances are printed
+	Type : Code
+
+3 - Title : Square instances are printed
+	Type : Code
+

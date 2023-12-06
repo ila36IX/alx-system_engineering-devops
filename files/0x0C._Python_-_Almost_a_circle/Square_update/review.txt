@@ -1,0 +1,48 @@
+1 - Title : Files exist
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/square.py
+	Type : Requirement
+
+4 - Title : def update(self, *args, **kwargs) exists in Square
+	Type : Code
+	File : main_0.py
+
+5 - Title : Update *args id: update(89)
+	Type : Code
+	File : main_1.py
+
+6 - Title : Update *args id and size: update(89, 6)
+	Type : Code
+	File : main_2.py
+
+7 - Title : Update *args id, size and x: update(89, 6, 2)
+	Type : Code
+	File : main_3.py
+
+8 - Title : Update *args id, size, x and y: update(89, 6, 2, 3)
+	Type : Code
+	File : main_4.py
+
+9 - Title : Update **kwargs id: update(id=89)
+	Type : Code
+	File : main_5.py
+
+10 - Title : Update **kwargs id and size: update(id=89, size=8)
+	Type : Code
+	File : main_6.py
+
+11 - Title : Update **kwargs id, size and x: update(id=89, size=8, x=3)
+	Type : Code
+	File : main_7.py
+
+12 - Title : Update **kwargs id, size, x and y: update(id=89, size=8, x=3, y=4)
+	Type : Code
+	File : main_8.py
+
+13 - Title : Pycodestyle validation
+	Type : Requirement
+

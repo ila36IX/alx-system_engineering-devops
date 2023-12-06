@@ -1,0 +1,50 @@
+1 - Title : Files exist
+	Type : Requirement
+
+2 - Title : First line contains #!/usr/bin/python3
+	Type : Requirement
+
+3 - Title : Everything is documented in models/base.py
+	Type : Requirement
+
+4 - Title : from_json_string method is used
+	Type : Requirement
+
+5 - Title : create method is used
+	Type : Requirement
+
+6 - Title : load_from_file class method exists in Base
+	Type : Code
+	File : main_0.py
+
+7 - Title : load_from_file returns a list object
+	Type : Code
+	File : main_1.py
+
+8 - Title : Rectangle.load_from_file() returns an empty list if Rectangle.json doesn’t exist
+	Type : Code
+	File : main_2.py
+
+9 - Title : Square.load_from_file() returns an empty list if Square.json doesn’t exist
+	Type : Code
+	File : main_3.py
+
+10 - Title : Rectangle.load_from_file() returns an empty list if Rectangle.json contains "[]"
+	Type : Code
+	File : main_4.py
+
+11 - Title : Square.load_from_file() returns an empty list if Square.json contains "[]"
+	Type : Code
+	File : main_5.py
+
+12 - Title : Rectangle.load_from_file() returns a list of Rectangle if Rectangle.json contains a serialized list of Rectangle 
+	Type : Code
+	File : main_6.py
+
+13 - Title : Square.load_from_file() returns a list of Square if Square.json contains a serialized list of Square 
+	Type : Code
+	File : main_7.py
+
+14 - Title : Pycodestyle validation
+	Type : Requirement
+
