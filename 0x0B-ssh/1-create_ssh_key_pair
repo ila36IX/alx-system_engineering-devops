@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Create the peer public/private key using ksa algorithm
 # passphrase will be betty
 # The private key will be named school

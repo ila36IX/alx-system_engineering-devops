@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Connect to a remote server using ssh
 # Using also the private key ~/.ssh/school
 
