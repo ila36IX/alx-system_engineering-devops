@@ -1,6 +1,6 @@
 # Install flask from pip3
 
-package { 'Flask':
-  ensure   => '2.1.0',
+package { 'python3-flask':
   provider => 'pip3',
+  ensure   => '2.1.0'
 }
