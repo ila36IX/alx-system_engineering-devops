@@ -1,20 +1,24 @@
 # configure an brand new Ubuntu machine
-
-package { 'nginx':
-  ensure   => installed,
-  name     => 'nginx',
-  provider => 'apt',
+package {'nginx':
+  ensure => 'present',
 }
 
-file { '/var/www/html/index.html':
-  ensure  => present,
-  path    => '/var/www/html/index.html',
-  content => 'Hello World!',
+exec {'install':
+  command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
+  provider => shell,
+
 }
 
-file { '/etc/nginx/sites-available/default':
-  ensure => present,
-  path   => '/etc/nginx/sites-available/default',
-  line   => "server_name _;\n\tlocation /redirect_me {\n\t\treturn 301 \$scheme://google.com;\n\t}",
-  match  => 'server_name _;$',
+exec {'Hello':
+  command  => 'echo "Hello World!" | sudo tee /var/www/html/index.html',
+  provider => shell,
+}
+
+exec {'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/blog.ehoneahobed.com\/;\\n\\t}/" /etc/nginx/sites-available/default':
+  provider => shell,
+}
+
+exec {'run':
+  command  => 'sudo service nginx restart',
+  provider => shell,
 }
