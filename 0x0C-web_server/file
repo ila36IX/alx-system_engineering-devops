@@ -45,16 +45,7 @@ server {
 
         server_name _;
 location /redirect_me {
-		return 301 $scheme://google.com;
-	}
-location /redirect_me {
-		return 301 $scheme://google.com;
-	}
-tlocation /redirect_me {
-		return 301 $scheme://google.com;
-	}
-tlocation /redirect_me {
-		return 301 $scheme://google.com;
+	return 301 $scheme://google.com;
 	}
 
 

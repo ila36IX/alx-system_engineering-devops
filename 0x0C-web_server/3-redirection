@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install NGINX web server
+install NGINX web server
 apt install nginx -y
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
@@ -7,8 +7,5 @@ service nginx start
 
 # Configure Nginx server so that /redirect_me 
 # is redirecting to another page.
-replacment="     location /redirect_me {\n		return 301 \$scheme:\/\/google.com;\n	}";
-string="server_name _;";
-sed -e "/$string/ a $replacment" /etc/nginx/sites-available/default > ff.buffer
-mv ff.buffer /etc/nginx/sites-available/default
+sudo sed -i '24i\       rewrite ^/redirect_me https://google.com permanent;' /etc/nginx/sites-available/default
 systemctl restart nginx
