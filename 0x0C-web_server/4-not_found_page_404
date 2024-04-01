@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Configure Nginx server so that /redirect_me 
+# is redirecting to another page.
+
+
+echo "Ceci n'est pas une page" > /var/www/html/notfound.html
+replacment='server_name _;\n\terror_page 404 \/notfound.html\n\tlocation  \/notfound.html {\n\t\tinternal;\n\t};';
+string="server_name _;";
+sed -i "s/$string/$replacment/g" /etc/nginx/sites-available/default

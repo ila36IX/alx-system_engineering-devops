@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Use the scp to cp files to the remote server
+
+if [[ $# -eq 4 ]]
+then
+	PATH_TO_FILE=$1
+	IP=$2 
+	USERNAME=$3 
+	PATH_TO_SSH_KEY=$4
+	scp -T -i "$PATH_TO_SSH_KEY" "$PATH_TO_FILE" "$USERNAME"@"$IP":~/	
+else
+	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+fi

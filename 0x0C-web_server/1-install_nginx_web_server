@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# install NGINX web server
+apt install nginx -y
+echo "Hello World!" > /var/www/html/index.html

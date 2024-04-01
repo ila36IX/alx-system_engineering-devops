@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Configure Nginx server so that /redirect_me 
+# is redirecting to another page.
+
+replacment="server_name _;\n\tlocation \/redirect_me {\n\t\treturn 301 \$scheme:\/\/google.com;\n\t}";
+string="server_name _;";
+sed -i "s/$string/$replacment/g" /etc/nginx/sites-available/default
