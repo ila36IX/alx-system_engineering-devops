@@ -44,14 +44,18 @@ server {
         index index.html index.htm index.nginx-debian.html;
 
         server_name _;
-	error_page 404 /notfound.html
-	location  /notfound.html {
-		internal;
-	};
-	error_page 404 /notfound.html
-	location  /notfound.html {
-		internal;
-	};
+location /redirect_me {
+		return 301 $scheme://google.com;
+	}
+location /redirect_me {
+		return 301 $scheme://google.com;
+	}
+tlocation /redirect_me {
+		return 301 $scheme://google.com;
+	}
+tlocation /redirect_me {
+		return 301 $scheme://google.com;
+	}
 
 
         location / {
