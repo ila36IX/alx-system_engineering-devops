@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # install NGINX web server
-apt install nginx -y
-echo "Hello World!" > /var/www/html/index.html
+sudo apt install nginx -y
+sudo echo "Hello World!" > /var/www/html/index.html
