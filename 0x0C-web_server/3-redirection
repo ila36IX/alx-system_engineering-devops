@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-install NGINX web server
+# install NGINX web server
 apt install nginx -y
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
