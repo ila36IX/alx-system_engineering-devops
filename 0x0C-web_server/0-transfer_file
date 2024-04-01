@@ -7,7 +7,13 @@ then
 	IP=$2 
 	USERNAME=$3 
 	PATH_TO_SSH_KEY=$4
-	sudo scp StrictHostKeyChecking=no -i "$PATH_TO_SSH_KEY" "$PATH_TO_FILE" "$USERNAME"@"$IP":~/	
+	scp  -i "$PATH_TO_SSH_KEY" StrictHostKeyChecking=no "$PATH_TO_FILE" "$USERNAME"@"$IP":~/	
+elif [[ $# -eq 3 ]]
+then
+	PATH_TO_FILE=$1
+	IP=$2 
+	USERNAME=$3 
+	scp StrictHostKeyChecking=no "$PATH_TO_FILE" "$USERNAME"@"$IP":~/	
 else
 	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 fi
