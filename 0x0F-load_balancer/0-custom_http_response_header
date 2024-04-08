@@ -17,7 +17,7 @@ replacement="server_name _;\n\terror_page 404 \/not_found.html;\n\tlocation = \/
 sudo sed -i "s/server_name _;/$replacement/" /etc/nginx/sites-enabled/default
 
 # add a header member that endicating server hostname
-replacement="server_name _;\n\tadd_header X-Served-By $(hostname)"
+replacement="server_name _;\n\tadd_header X-Served-By $(hostname);"
 sudo sed -i "s/server_name _;/$replacement/" /etc/nginx/sites-enabled/default
 
 # restart the server
