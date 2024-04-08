@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on a server
+
+sudo apt install HAproxy
+
+
+echo -e "frontend http80\n"\
+"        bind *:80\n"\
+"        timeout client 60s\n"\
+"        mode http\n"\
+"        default_backend lb\n"\
+""\
+"backend lb\n"\
+"        timeout connect 10s\n"\
+"        timeout server 100s\n"\
+"        mode http\n"\
+"        server web-01 18.206.208.23\n"\
+"        server web-02 54.210.152.224\n" > HAproxy.cfg
+haproxy -f -D HAproxy.cfg
