@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configure a new server to run NGINX
+
+# add a header member that endicating server hostname
+replacement="server_name _;\n\tadd_header X-Served-By $(hostname)"
+sudo sed -i "s/server_name _;/$replacement/" file
+
