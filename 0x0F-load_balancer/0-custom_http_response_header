@@ -1,24 +1,68 @@
 #!/usr/bin/env bash
 # Configure a new server to run NGINX
 
-sudo apt-get update
-sudo apt-get install -y nginx
+# make sure scirpt is runing under sudo
+if [ "$(id -u)" -ne 0 ];
+then
+	echo "sudo privileges are required"
+	exit 1000
+fi
 
-# Index page
-echo "Hello World!" | sudo tee /var/www/html/index.html
+# sudo apt-get update
+apt-get install -y nginx
+
+chmod u+r -R /var/www
+
+# Change the indexing
+echo "Hello World!" > /var/www/html/index.html
+
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.backup
+
+echo "server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                try_files \$uri \$uri/ =404;
+        }
+
+        location /redirect_me {
+                return 301 https://google.com;
+        }
+
+        error_page 404 /not_found.html;
+
+        location /not_found.html {
+                internal;
+        }
+}" > /etc/nginx/sites-available/getalien.tech
+
+# Make the getalien.tech config the default one
+ln -fs /etc/nginx/sites-available/getalien.tech /etc/nginx/sites-enabled/default
 
 # Redirect /redirect_me path to google
-replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/google.com permanent;"
-sudo sed -i "s/server_name _;/$replacement/" /etc/nginx/sites-enabled/default
+redir_location='https:\/\/google.com'
+redir_block='/location \/redirect_me {/,/}/'
+# Search for a pattern from the line containing location /redirect_me { to the line containing }
+sed -i "$redir_block s/return 301 .*;/return 301 ${redir_location};/g" /etc/nginx/sites-available/getalien.tech
 
 # error 404 page
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/not_found.html
-replacement="server_name _;\n\terror_page 404 \/not_found.html;\n\tlocation = \/not_found.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
-sudo sed -i "s/server_name _;/$replacement/" /etc/nginx/sites-enabled/default
+echo "Ceci n'est pas une page" > /var/www/html/not_found.html
 
 # add a header member that endicating server hostname
-replacement="server_name _;\n\tadd_header X-Served-By $(hostname);"
-sudo sed -i "s/server_name _;/$replacement/" /etc/nginx/sites-enabled/default
+if [ "$(grep -c "add_header X-Served-By" /etc/nginx/sites-available/getalien.tech)" -eq 1 ]
+then
+	sed -i "s/X-Served-By .*/X-Served-By $(hostname);/" /etc/nginx/sites-available/getalien.tech
+else
+	costum_header="add_header X-Served-By $(hostname);"
+	sed -i "/server_name _;/a $costum_header" /etc/nginx/sites-available/getalien.tech
+fi
 
 # restart the server
-sudo service nginx restart
+service nginx restart
