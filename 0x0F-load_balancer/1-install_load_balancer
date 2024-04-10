@@ -14,4 +14,4 @@ echo -e "frontend http80\n"\
 "        server web-01 18.206.208.23\n"\
 "        server web-02 54.210.152.224\n" >> /etc/haproxy/haproxy.cfg
 echo "ENABLED=1" >> /etc/default/haproxy
-service haproxy reload
+service haproxy restart
