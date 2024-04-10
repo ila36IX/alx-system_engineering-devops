@@ -1,3 +1,4 @@
+# congigure new server
 package { 'nginx':
   ensure   => installed,
   provider => 'apt'
