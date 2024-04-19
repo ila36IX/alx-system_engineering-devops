@@ -1,15 +1,27 @@
-# congigure new server
+# Update package lists
+package { 'apt':
+  ensure => 'present',
+} -> Exec { 'update':
+  command => '/usr/bin/apt-get update',
+}
+
+# Install nginx package
 package { 'nginx':
-  ensure   => installed,
-  provider => 'apt'
+  ensure => 'present',
 }
 
-exec {'sed -i "/server_name _;/a add_header X-Served-By $(hostname);" /etc/nginx/sites-available/getalien.tech':
-  path   => '/usr/bin:/usr/sbin:/bin',
-  unless => 'grep -c "add_header X-Served-By" /etc/nginx/sites-available/getalien.tech'
+# Add custom HTTP header
+file_line { 'http_header':
+  path         => '/etc/nginx/nginx.conf',
+  match        => '^http {',
+  # Insert line after the matching line
+  insert_after => true,
+  line         => "add_header X-Served-By \"${hostname}\";",
 }
 
-exec {'reload the web server':
-  path    => '/usr/bin:/usr/sbin:/bin',
-  command => 'service nginx reload'
+# Restart nginx service
+service { 'nginx':
+  ensure => running,
+  enable => true,
 }
+
