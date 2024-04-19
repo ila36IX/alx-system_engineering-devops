@@ -13,7 +13,7 @@ package { 'nginx':
 # Add custom HTTP header
 file_line { 'http_header':
   path         => '/etc/nginx/nginx.conf',
-  match        => '^http {',
+  match        => 'server_name',
   # Insert line after the matching line
   insert_after => true,
   line         => "add_header X-Served-By \"${hostname}\";",
