@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     name = infos.get("name")
     all_todos = len(todos)
-    fin_todos = len(list(filter(lambda t: t.get("completed"), todos)))
+    comp_todos = list(filter(lambda t: t.get("completed"), todos))
 
-    print(f"Employee {name} is done with tasks({fin_todos}/{all_todos}):")
-    for todo in todos:
+    print(f"Employee {name} is done with tasks({len(comp_todos)}/{all_todos}):")
+    for todo in comp_todos:
         print("\t {}".format(todo.get("title")))
