@@ -30,5 +30,5 @@ if __name__ == "__main__":
         i += 1
 
     f = open("todo_all_employees.json", 'w')
-    json.dump(json_list, f, indent = 4)
+    json.dump(json_list, f)
     f.close()

@@ -9,7 +9,7 @@ import sys
 if __name__ == "__main__":
     id = sys.argv[1]
 
-    u = "https://jsonplaceholder.typicode.com" 
+    u = "https://jsonplaceholder.typicode.com"
     todos_url = "{}/todos?userId={}".format(u, id)
     infos_url = "{}/users/{}".format(u, id)
 
