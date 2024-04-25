@@ -20,7 +20,7 @@ if __name__ == "__main__":
     all_todos = len(todos)
     comp_todos = list(filter(lambda t: t.get("completed"), todos))
 
-    print("Employee {} is done with tasks({}/{}):".\
+    print("Employee {} is done with tasks({}/{}):".
           format(name, len(comp_todos), all_todos))
     for todo in comp_todos:
         print("\t {}".format(todo.get("title")))

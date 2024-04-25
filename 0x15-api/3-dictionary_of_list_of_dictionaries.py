@@ -10,14 +10,13 @@ if __name__ == "__main__":
     users = requests.get("{}/users/".format(u)).json()
 
     json_list = {}
-    i = 1
     for user in users:
         id = user.get("id")
         name = user.get("username")
+        print(name)
         todos_url = "{}/todos?userId={}".format(u, id)
 
-        todos = requests.get(todos_url)
-        todos = todos.json()
+        todos = requests.get(todos_url).json()
 
         todos_list = [
             {
@@ -26,8 +25,7 @@ if __name__ == "__main__":
                 "username": name
             } for t in todos
         ]
-        json_list = {str(id): todos_list}
-        i += 1
+        json_list.update({str(id): todos_list})
 
     f = open("todo_all_employees.json", 'w')
     json.dump(json_list, f)
