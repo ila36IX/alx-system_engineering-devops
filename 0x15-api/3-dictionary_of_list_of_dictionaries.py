@@ -13,7 +13,6 @@ if __name__ == "__main__":
     for user in users:
         id = user.get("id")
         name = user.get("username")
-        print(name)
         todos_url = "{}/todos?userId={}".format(u, id)
 
         todos = requests.get(todos_url).json()
