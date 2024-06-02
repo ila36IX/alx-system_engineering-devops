@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Get list of hot posts of a subreddit
+"""
 import requests
 
 headers = {"User-Agent": "MyCustomUserAgent/1.0"}
