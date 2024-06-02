@@ -25,7 +25,6 @@ def page_hots(subreddit, hot_list, after_query=""):
     hot_posts = r.get('data').get('children')
     for post in hot_posts:
         hot_list.append(post.get('data').get('title'))
-        print('-', post.get('data').get('title'))
     return after
 
 
