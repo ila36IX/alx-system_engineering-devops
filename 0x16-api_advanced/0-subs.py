@@ -6,6 +6,7 @@ import requests
 
 
 def number_of_subscribers(subreddit):
+    """Number of subs"""
     base_url = "https://www.reddit.com"
     endpoint = base_url + "/r/{}/about.json".format(subreddit)
     r = requests.get(endpoint, allow_redirects=False)
