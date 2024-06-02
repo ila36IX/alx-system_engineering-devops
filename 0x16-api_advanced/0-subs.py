@@ -7,11 +7,10 @@ import requests
 
 def number_of_subscribers(subreddit):
     """Number of subs"""
-    base_url = "https://www.reddit.com"
-    endpoint = base_url + "/r/{}/about.json".format(subreddit)
-    r = requests.get(endpoint, allow_redirects=False)
-    if r.status_code != 200:
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    r = requests.get(url, allow_redirects=False)
+    try:
+        data = r.json()
+        return data['data']['subscribers'] 
+    except Exception as e:
         return 0
-    response = r.json().get('data')
-    num_subs = response.get('subscribers')
-    return num_subs
